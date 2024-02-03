@@ -7,7 +7,7 @@ export const CurrentWeatherDataProvider = ( { children } ) => {
     const [city, setCity] = useState("são paulo");
     const [currentWeather, setCurrentWeather] = useState(null);
 
-    async function getWeatherData() {
+    async function getCurrentWeatherData() {
         const currentWeatherApiUrl = `${import.meta.env.VITE_API_BASE_URL}weather?q=${city}&lang=pt_br&APPID=${import.meta.env.VITE_API_KEY}&units=metric`;
 
         axios.get(currentWeatherApiUrl)
@@ -20,7 +20,7 @@ export const CurrentWeatherDataProvider = ( { children } ) => {
     };
 
     useEffect(() => {
-        getWeatherData(setCurrentWeather);
+        getCurrentWeatherData(setCurrentWeather);
     }, [city]);
 
     return (
