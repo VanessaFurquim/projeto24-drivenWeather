@@ -6,7 +6,7 @@ import TitleAndLogo from "./components/TitleAndLogo";
 import Divider from "./components/Divider";
 import CurrentDateAndTime from "./components/CurrentDateAndTime";
 import CurrentWeatherDetails from "./components/CurrentWeatherDetails";
-import { WeatherForecastContext, WeatherForecastDataProvider } from "./contexts/WeatherForecastContext";
+import { WeatherForecastDataProvider } from "./contexts/WeatherForecastContext";
 import WeatherForecastGraph from "./components/WeatherForecastGraph";
 
 export default function App() {
@@ -23,7 +23,7 @@ export default function App() {
                     <CurrentWeatherDetails />
                 </HomePageContainer>
             </CurrentWeatherDataProvider>
-            
+
             <WeatherForecastDataProvider>
                 <WeatherForecastGraph />
             </WeatherForecastDataProvider>
