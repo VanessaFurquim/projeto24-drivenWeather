@@ -2,10 +2,17 @@ import { useContext } from "react";
 import { CurrentWeatherContext } from "../contexts/CurrentWeatherContext";
 
 export default function CurrentWeather() {
-    const currentWeather = useContext(CurrentWeatherContext);
-    console.log(currentWeather)
+    const currentWeatherData = useContext(CurrentWeatherContext);
+
+    const api = {
+        iconBase: "https://openweathermap.org/img/wn/",
+      };
 
     return (
-        <h1>{JSON.stringify(currentWeather.currentWeather)}</h1>
+        <>
+            <img src = {`${api.iconBase}${currentWeatherData?.currentWeather?.weather?.[0].icon}@2x.png`} />
+            <h1>{currentWeatherData?.currentWeather?.main.temp}°C</h1>
+            <p>{currentWeatherData?.currentWeather?.weather?.[0].description}</p>
+        </> 
     );
 };
