@@ -8,6 +8,7 @@ import CurrentDateAndTime from "./components/CurrentDateAndTime";
 import CurrentWeatherDetails from "./components/CurrentWeatherDetails";
 import { WeatherForecastDataProvider } from "./contexts/WeatherForecastContext";
 import WeatherForecastGraph from "./components/WeatherForecastGraph";
+import CitySearchBar from "./components/CitySearchBar";
 
 export default function App() {
 
@@ -16,17 +17,19 @@ export default function App() {
             <CurrentWeatherDataProvider>
                 <HomePageContainer>
                     <TitleAndLogo />
-                    <LocationInformation />
+                    <CitySearchBar />
                     <CurrentWeather />
                     <Divider />
                     <CurrentDateAndTime />
                     <CurrentWeatherDetails />
+                    <LocationInformation />
+
+                    <WeatherForecastDataProvider>
+                        <WeatherForecastGraph />
+                    </WeatherForecastDataProvider>
+
                 </HomePageContainer>
             </CurrentWeatherDataProvider>
-
-            <WeatherForecastDataProvider>
-                <WeatherForecastGraph />
-            </WeatherForecastDataProvider>
         </>
         
     );
