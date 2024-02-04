@@ -1,42 +1,21 @@
 import styled from "styled-components";
 import { CurrentWeatherDataProvider } from "./contexts/CurrentWeatherContext";
-import CurrentWeather from "./components/CurrentWeather";
-import LocationInformation from "./components/LocationInformation";
-import TitleAndLogo from "./components/TitleAndLogo";
-import Divider from "./components/Divider";
-import CurrentDateAndTime from "./components/CurrentDateAndTime";
-import CurrentWeatherDetails from "./components/CurrentWeatherDetails";
-import { WeatherForecastDataProvider } from "./contexts/WeatherForecastContext";
-import WeatherForecastGraph from "./components/WeatherForecastGraph";
-import CitySearchBar from "./components/CitySearchBar";
+import SidePanel from "./pageSections/SidePanel";
+import MainPanel from "./pageSections/MainPainel";
 
 export default function App() {
 
     return (
-        <>
-            <CurrentWeatherDataProvider>
-                <HomePageContainer>
-                    <TitleAndLogo />
-                    <CitySearchBar />
-                    <CurrentWeather />
-                    <Divider />
-                    <CurrentDateAndTime />
-                    <CurrentWeatherDetails />
-                    <LocationInformation />
-
-                    <WeatherForecastDataProvider>
-                        <WeatherForecastGraph />
-                    </WeatherForecastDataProvider>
-
-                </HomePageContainer>
-            </CurrentWeatherDataProvider>
-        </>
-        
+        <CurrentWeatherDataProvider>
+            <HomePageContainer>
+                <SidePanel />
+                <MainPanel />
+            </HomePageContainer>
+        </CurrentWeatherDataProvider>
     );
 };
 
 const HomePageContainer = styled.main`
-    /* background-color: #EFEFEF; */
-    background-color: white;
-
+    background-color: #EFEFEF;
+    display: flex;
 `;

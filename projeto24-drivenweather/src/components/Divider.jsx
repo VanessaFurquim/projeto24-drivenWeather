@@ -1,15 +1,15 @@
 import { styled } from "styled-components";
 
 export default function Divider() {
-
     return (
-        <SeparateLine />
+        <DividerStyle />
     );
 };
 
-const SeparateLine = styled.div`
-  width: 70%;
-  height: 2px;
-  background: lightgray;
-  margin: 20px 0px 30px 0px;
+const DividerStyle = styled.div`
+    width: 75%;
+    height: 3px;
+    border-radius: 50px;
+    background: #EDEDEF;
+    margin: 25px 0 30px 45px;
 `;
