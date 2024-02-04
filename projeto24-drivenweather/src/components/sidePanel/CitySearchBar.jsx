@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CurrentWeatherContext } from "../contexts/CurrentWeatherContext";
+import { CurrentWeatherContext } from "../../contexts/CurrentWeatherContext";
 import { styled } from "styled-components";
 import { CiSearch } from "react-icons/ci";
 

@@ -1,9 +1,9 @@
 import { styled } from "styled-components";
-import CitySearchBar from "../components/CitySearchBar";
-import CurrentDateAndTime from "../components/CurrentDateAndTime";
-import CurrentWeather from "../components/CurrentWeather";
-import Divider from "../components/Divider";
-import TitleAndLogo from "../components/TitleAndLogo";
+import TitleAndLogo from "../components/sidePanel/TitleAndLogo";
+import CitySearchBar from "../components/sidePanel/CitySearchBar";
+import CurrentWeather from "../components/sidePanel/CurrentWeather";
+import Divider from "../components/sidePanel/Divider";
+import CurrentDateAndTime from "../components/sidePanel/CurrentDateAndTime";
 
 export default function SidePanel() {
     return (
@@ -18,7 +18,7 @@ export default function SidePanel() {
 };
 
 const SidePanelStyle = styled.div`
-    width: 40vw;
+    width: 35vw;
     height: 100vh;
     padding: 5% 1.4%;
     background-color: #FFFFFF;

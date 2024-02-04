@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CurrentWeatherContext } from "../contexts/CurrentWeatherContext";
+import { CurrentWeatherContext } from "../../contexts/CurrentWeatherContext";
 import { styled } from "styled-components";
 
 export default function CurrentWeather() {
@@ -13,7 +13,7 @@ export default function CurrentWeather() {
     function defineMainColor(currentWeatherCondition) {
         switch (currentWeatherCondition) {
             case "Clear":
-                return "orange";
+                return "#EC6E4C";
             case "Clouds":
                 return "darkgray";
             case "Rain":

@@ -16,6 +16,8 @@ export default function App() {
 };
 
 const HomePageContainer = styled.main`
-    background-color: #EFEFEF;
     display: flex;
+    width: 100vw;
+    height: 100vh;
+    background-color: #EFEFEF;
 `;

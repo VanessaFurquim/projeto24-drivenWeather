@@ -1,5 +1,5 @@
 import { styled } from "styled-components";
-import coatIcon from "../assets/casaco.png"
+import coatIcon from "../../assets/casaco.png";
 
 export default function TitleAndLogo() {
 
