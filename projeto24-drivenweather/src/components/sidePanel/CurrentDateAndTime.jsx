@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import { styled } from "styled-components";
 
 export default function CurrentDateAndTime() {
+    
     function defineWeekdayPortuguese() {
         const weekday = dayjs().format("dddd");
 

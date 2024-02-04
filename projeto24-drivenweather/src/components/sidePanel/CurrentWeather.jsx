@@ -6,8 +6,8 @@ export default function CurrentWeather() {
     const currentWeatherData = useContext(CurrentWeatherContext);
     const currentWeatherCondition = currentWeatherData.currentWeather?.weather?.[0].main;
 
-    const api = {
-        iconBase: "https://openweathermap.org/img/wn/",
+    const iconApi = {
+        iconBaseUrl: "https://openweathermap.org/img/wn/"
       };
 
     function defineMainColor(currentWeatherCondition) {
@@ -34,7 +34,7 @@ export default function CurrentWeather() {
     return (
         <>
             <CurrentWeatherStyle style = {{color: defineMainColor(currentWeatherCondition)}}>
-                <img src = {`${api.iconBase}${currentWeatherData?.currentWeather?.weather?.[0].icon}@2x.png`} />
+                <img src = {`${iconApi.iconBaseUrl}${currentWeatherData?.currentWeather?.weather?.[0].icon}@2x.png`} />
                 <h1>{currentWeatherData?.currentWeather?.main.temp.toFixed(0)}</h1>
                 <p>°C</p>
             </CurrentWeatherStyle>

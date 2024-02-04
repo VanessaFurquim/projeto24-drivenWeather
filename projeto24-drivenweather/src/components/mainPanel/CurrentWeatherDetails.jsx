@@ -47,8 +47,7 @@ const CellsContainerStyle = styled.div`
     flex-wrap: wrap;
     justify-content: space-between;
     align-items: center;
-    margin-top: 28px;
-    /* margin-bottom: 25px; */
+    margin-top: 10px;
 `;
 
 const InformationCellStyle = styled.div`

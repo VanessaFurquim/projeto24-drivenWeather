@@ -56,7 +56,7 @@ export default function WeatherForecastGraph() {
 
 const PhraseStyle = styled.h1`
     font-size: 20px;
-    margin-top: 28px;
+    margin-top: 15px;
     margin-bottom: 25px;
 `;
 

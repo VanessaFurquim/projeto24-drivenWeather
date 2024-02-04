@@ -22,5 +22,5 @@ const MainPanelStyle = styled.div`
     flex-direction: column;
     overflow-y: auto;
     width: 65vw;
-    padding: 4.5% 3.5%;
+    padding: 2.8% 2.5%;
 `;
