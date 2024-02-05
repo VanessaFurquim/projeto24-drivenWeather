@@ -15,7 +15,7 @@ export const CurrentWeatherDataProvider = ( { children } ) => {
                 setCurrentWeather(response.data);
             })
             .catch((error) => {
-                console.error(error);
+                alert(error);
             });
     };
 

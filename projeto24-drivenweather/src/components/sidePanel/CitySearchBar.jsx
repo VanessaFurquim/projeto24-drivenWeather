@@ -5,18 +5,19 @@ import { CiSearch } from "react-icons/ci";
 
 export default function CitySearchBar() {
     const currentWeatherData = useContext(CurrentWeatherContext);
-    
-    function handleInputChange(event) {
-        currentWeatherData.setCity("manaus");
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        currentWeatherData.setCity(event.target.searchedCity.value);
     };
       
     return (
-        <SearchContainer>
+        <SearchContainer onSubmit = { (event) => handleSubmit(event) }>
             <SearchInput
+                name = "searchedCity"
                 type = "text"
                 placeholder = "Procure por uma cidade"
                 id = "searchedCity"
-                onChange = { (event) => handleInputChange(event) }
             />
             <SearchIcon className = "search-icon" />
         </SearchContainer>
