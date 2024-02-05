@@ -15,7 +15,7 @@ export const CurrentWeatherDataProvider = ( { children } ) => {
                 setCurrentWeather(response.data);
             })
             .catch((error) => {
-                alert(error);
+                alert("Algo deu errado! Digite uma cidade válida e tente novamente.");
             });
     };
 
